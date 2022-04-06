@@ -38,9 +38,12 @@ li{
   ╚═══════════════╝*/
 
  :root{
-    /*- COLORI -*/
+    /*- COLORI TESTO -*/
     --colore-testo: #d2d2d2;
-    --colore-testo-titolo: #000;
+    --colore-testo-titolo: #ffffff;
+    /*- COLORE BG -*/
+    --colore-bg-aside: #000;
+    --colore-bg-header: rgba(0, 0, 0, 0.5);
     --colore-bg-primario: #fff;
 
     /*- DIMENSIONI GUTTER E SPAZIATURE-*/
@@ -55,15 +58,7 @@ li{
 /*╔═══════════════╗
        DEBUG
   ╚═══════════════╝*/
-  .debug header{
-      background-color: aqua;
-      min-height: 200PX;
-  }
 
-  .debug aside{
-      background-color: black;
-     
-  }
 
   .debug .content{
       background-color: coral;
@@ -77,9 +72,29 @@ li{
        COMMON
   ╚═══════════════╝*/
 
-  .hide{
+.hide{
       display: none;
-  }
+}
+
+/*--- BUTTON ---*/
+
+button{
+    border: none;    
+    background-color: transparent;
+    color: var(--colore-testo-titolo);
+}
+
+.btn-big{
+    border: 1px solid var(--colore-testo-titolo);
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.btn-mini{}
+
+
 
 
 
@@ -88,11 +103,14 @@ li{
   ╚═══════════════╝*/
 
 /*---- HEADER ---*/
-header { 
+header {
+    background-color: var(--colore-bg-header);
     position: fixed;
-    width: calc(100% - 230px);
+    width: calc(100% - 50px);
     top: 0;
     right: 0;
+    text-align: right;
+    padding: 20px 5px;
 }
 
 /*---- MAIN ---*/
@@ -108,8 +126,9 @@ main {
 /*---- ASIDE ---*/
 
 aside {
+    background-color: var(--colore-bg-aside);
     width: 50px;
-    padding: 10px;
+    padding: 10px 0; 
     /* width: 230px; */
     height: calc(100vh - 100px);
     flex-shrink: 0;
@@ -117,12 +136,19 @@ aside {
     flex-flow: column nowrap;
     justify-content: space-between;
     align-items: center;
-    font-size: x-large;
-    text-align: center;
+}
+
+aside img{
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: auto;
 }
 
 aside .logo{
     margin-bottom: var(--gutter-smal);
+    height: 35px;
+    width: 35px;
 }
 aside nav ul{
     list-style: none;
@@ -137,13 +163,17 @@ aside .user hr{
     margin: 10px 0;
 } */
 
-aside .user .user-top{
-    font-size: medium;
-    margin-bottom: var(--gutter-smal);
+aside .user .user-top img{
+    height: 75%;
+    width: 75%;
+    margin: auto;
+    margin-bottom: var(--gutter-big);
 }
 
 aside .user .user-bot{
-    font-size: xx-large;
+    background-color: #808080;
+    border-radius: 100%;
+    overflow: hidden;
 }
 
 
