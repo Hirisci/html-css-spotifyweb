@@ -40,6 +40,7 @@ li{
  :root{
     /*- COLORI TESTO -*/
     --colore-testo: #d2d2d2;
+    --colore-testo-opaco: rgba(111, 111, 111, 0.7);
     --colore-testo-titolo: #ffffff;
     /*- COLORE BG -*/
     --colore-bg-aside: #000;
@@ -122,6 +123,7 @@ main {
 /*---- ASIDE ---*/
 
 aside {
+    color: var(--colore-testo-opaco);
     background-color: var(--colore-bg-aside);
     width: 50px;
     padding: 10px 0; 
@@ -176,6 +178,7 @@ aside .user .user-bot{
 /*---- FOOTER ---*/
 
 footer {
+    color: var(--colore-testo-opaco);
     background-color: var(--colore-bg-footer);
     height: 100px;
     width: 100%;
@@ -184,6 +187,11 @@ footer {
     align-items: center;
     padding: 10px;
 }
+
+footer i{
+    color: var(--colore-testo);
+}
+
 
 footer .play-track{
     display: flex;
@@ -209,3 +217,44 @@ footer .play-track-button-list{
     margin-left: 25px;
 }
 
+
+
+
+
+
+
+
+
+
+footer .audio-device{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+footer .audio-device .barra{
+    width: 100px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: var(--colore-testo-opaco);
+}
+
+footer .audio-device .barra .inner{
+    background-color: var(--colore-testo);
+    width: 35%;
+    position: relative;
+}
+
+footer .audio-device .barra .inner:hover::after{
+    content:"";
+    background-color: var(--colore-testo);
+    z-index: 10;
+    display: block;
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -8px;
+}
