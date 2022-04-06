@@ -53,10 +53,12 @@ li{
   ╚═══════════════╝*/
   .debug header{
       background-color: aqua;
+      min-height: 200PX;
   }
 
   .debug aside{
       background-color: black;
+     
   }
 
   .debug .content{
@@ -77,4 +79,37 @@ li{
     TAG SEMANTICI
   ╚═══════════════╝*/
 
+
+
+/*---- HEADER ---*/
+header { 
+    position: fixed;
+    width: calc(100% - 230px);
+    top: 0;
+    right: 0;
+}
+
+/*---- MAIN ---*/
+main {
+    display: flex;
+}
+
+/*--- CONTENT ---*/
+.content{
+    flex-grow: 1;
+}
+
+/*---- ASIDE ---*/
+aside {
+    width: 230px;
+    height: calc(100vh - 100px);
+    flex-shrink: 0;
+}
+
+/*---- FOOTER ---*/
+
+footer {
+    height: 100px;
+    width: 100%;
+}
 
