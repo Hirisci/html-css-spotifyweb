@@ -78,9 +78,7 @@ li{
 .hide{
     display: none;
 }
-section{
-    padding: 20px;
-}
+
 
 /*--- BUTTON ---*/
 
@@ -112,6 +110,7 @@ button{
 header {
     background-color: var(--colore-bg-header);
     position: fixed;
+    z-index: 10;
     width: calc(100% - 50px);
     top: 0;
     right: 0;
@@ -126,6 +125,7 @@ main {
 
 /*--- CONTENT ---*/
 .content{
+    padding: 20px;
     background-color: var(--colore-bg-content);
     flex-grow: 1;
     height: calc(100vh - 100px);
@@ -133,7 +133,7 @@ main {
 }
 
 .content nav {
-    margin-top: 80px;
+    margin-top: 60px;
     color: var(--colore-testo-opaco);
     text-transform: uppercase;
     text-align: center;
@@ -257,6 +257,11 @@ aside .logo{
     height: 35px;
     width: 35px;
 }
+aside .logo-big{
+    margin-bottom: var(--gutter-smal);
+    width: 150px;
+}
+
 aside nav ul{
     list-style: none;
 }
@@ -271,9 +276,8 @@ aside .user hr{
 } */
 
 aside .user .user-top img{
-    height: 75%;
-    width: 75%;
-    margin: auto;
+    width: 20px;
+    height: 20px;
     margin-bottom: var(--gutter-big);
 }
 
@@ -281,6 +285,8 @@ aside .user .user-bot{
     background-color: #808080;
     border-radius: 100%;
     overflow: hidden;
+    width: 30px;
+    height: 30px;
 }
 
 
@@ -390,4 +396,55 @@ footer .barra .inner:hover::after{
     top: 50%;
     transform: translateY(-50%);
     right: -8px;
+}
+
+
+
+@media screen and (min-width: 600px){
+
+    aside .logo{
+        display: none;
+    }
+
+    aside {
+        width: 250px;
+    }
+
+    .hide{
+        display: block;
+    }
+
+   
+    
+}
+
+
+
+
+
+@media screen and (min-width: 700px){
+    
+    .content .row{
+        gap: 10px;
+    }
+
+    
+    .content .row .card-song{
+        width: calc(100% /4 - 10px);
+    }
+
+
+    
+}
+
+@media screen and (min-width: 1100px){
+    .content .row{
+        gap: 10px;
+    }
+
+    
+    .content .row .card-song{
+        width: calc(100% / 6 - 10px);
+    }
+
 }
