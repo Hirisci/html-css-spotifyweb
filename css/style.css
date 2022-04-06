@@ -10,6 +10,10 @@
 
 /*--- TESTO ---*/
 
+body{
+    color: var(--colore-testo);
+    font-family: 'Montserrat', sans-serif;
+}
 
 p{
     font-size: 1rem;
@@ -73,13 +77,15 @@ li{
        COMMON
   ╚═══════════════╝*/
 
+  .hide{
+      display: none;
+  }
+
 
 
 /*╔═══════════════╗
     TAG SEMANTICI
   ╚═══════════════╝*/
-
-
 
 /*---- HEADER ---*/
 header { 
@@ -100,10 +106,17 @@ main {
 }
 
 /*---- ASIDE ---*/
+
 aside {
-    width: 230px;
+    width: 50px;
+    padding: 10px;
+    /* width: 230px; */
     height: calc(100vh - 100px);
     flex-shrink: 0;
+}
+
+aside .nav-aside .img{
+    width: 100%;
 }
 
 /*---- FOOTER ---*/
