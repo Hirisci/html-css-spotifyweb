@@ -44,6 +44,8 @@ li{
     /*- COLORE BG -*/
     --colore-bg-aside: #000;
     --colore-bg-header: rgba(0, 0, 0, 0.5);
+    --colore-bg-footer: #282828;
+    --colore-bg-content: #141922;
     --colore-bg-primario: #fff;
 
     /*- DIMENSIONI GUTTER E SPAZIATURE-*/
@@ -60,20 +62,13 @@ li{
   ╚═══════════════╝*/
 
 
-  .debug .content{
-      background-color: coral;
-  }
-  
-  .debug footer{
-      background-color: brown;
-  }
   
 /*╔═══════════════╗
        COMMON
   ╚═══════════════╝*/
 
 .hide{
-      display: none;
+    display: none;
 }
 
 /*--- BUTTON ---*/
@@ -92,7 +87,7 @@ button{
     font-weight: 700;
 }
 
-.btn-mini{}
+/* .btn-mini{} */
 
 
 
@@ -120,6 +115,7 @@ main {
 
 /*--- CONTENT ---*/
 .content{
+    background-color: var(--colore-bg-content);
     flex-grow: 1;
 }
 
@@ -180,6 +176,7 @@ aside .user .user-bot{
 /*---- FOOTER ---*/
 
 footer {
+    background-color: var(--colore-bg-footer);
     height: 100px;
     width: 100%;
 }
