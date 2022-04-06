@@ -65,7 +65,7 @@ li{
        TYPO
   ╚═══════════════╝*/
 
-  h2{
+ h2,h4{
     color: var(--colore-testo-titolo);
 }
 
@@ -221,6 +221,9 @@ main {
     overflow: hidden;
 }
 
+.content .row .card-song:hover .content .row .card-song .card-song-img .overlay{
+opacity: 1;
+}
 
 
 
@@ -269,27 +272,64 @@ aside nav ul{
 }
 
 aside nav ul li{
-    display: flex;
     margin-bottom: var(--gutter-smal);
 }
 
-/* regola >= reponsive 
+aside nav ul li a{
+    font-size: small;
+    display: flex;
+    align-items: center;
+    gap: var(--gutter-smal);
+}
+
 aside .user hr{
     margin: 10px 0;
-} */
+    width: 200px;    
+}
 
 aside .user .user-top img{
     width: 20px;
     height: 20px;
-    margin-bottom: var(--gutter-big);
+    margin-bottom: var(--gutter-big)
 }
 
-aside .user .user-bot{
+
+aside .user .user-bot,aside .user .user-top{
+    display: flex;
+    align-items: center;
+    gap:var(--gutter-smal);
+}
+
+aside .user .user-bot span{
+    color: var(--colore-testo-titolo);
+    font-weight: 700;
+}
+
+
+aside .user .user-bot img{
     background-color: #808080;
     border-radius: 100%;
     overflow: hidden;
     width: 30px;
     height: 30px;
+}
+
+aside .playlist{
+    margin-top: 10px;
+    flex-grow:1;
+    overflow-y: auto;
+    width: 100%;
+}
+
+aside .playlist ul li{
+    margin: 10px 0px;
+    font-size: small;
+}
+
+aside .playlist ul li a i{ 
+ font-size: 2rem ;
+ vertical-align: middle;
+ margin-right: 5px;
 }
 
 
@@ -401,9 +441,20 @@ footer .barra .inner:hover::after{
     right: -8px;
 }
 
+ul li:hover {
+    color:var(--colore-testo) ;
+}
 
 
 @media screen and (min-width: 600px){
+    header{
+        width: calc(100% - 250px);
+    }
+
+    aside{
+        padding: 20px;
+        align-items: flex-start;
+    }
 
     aside .logo{
         display: none;
@@ -417,6 +468,13 @@ footer .barra .inner:hover::after{
         display: block;
     }
 
+    aside img{
+        margin: 0;
+    }
+
+    aside .user .user-top img{
+        margin-bottom: 0;
+    }
    
     
 }
@@ -427,10 +485,6 @@ footer .barra .inner:hover::after{
 
 @media screen and (min-width: 700px){
 
-    header{
-        width: calc(100% - 250px);
-    }
-    
     .content .row{
         gap: 10px;
     }
@@ -438,19 +492,7 @@ footer .barra .inner:hover::after{
     .content .row .card-song{
         width: calc(100% /4 - 10px);
     }
-
-    aside{
-        padding: 10px;
-        align-items: flex-start;
-    }
-
-    aside img{
-        margin: 0;
-    }
-
-
-
-    
+  
 }
 
 @media screen and (min-width: 1100px){
