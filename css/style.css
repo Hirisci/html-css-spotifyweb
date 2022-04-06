@@ -39,7 +39,7 @@ li{
 
  :root{
     /*- COLORI -*/
-    --colore-testo: #fff;
+    --colore-testo: #d2d2d2;
     --colore-testo-titolo: #000;
     --colore-bg-primario: #fff;
 
@@ -113,11 +113,39 @@ aside {
     /* width: 230px; */
     height: calc(100vh - 100px);
     flex-shrink: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: x-large;
+    text-align: center;
 }
 
-aside .nav-aside .img{
-    width: 100%;
+aside .logo{
+    margin-bottom: var(--gutter-smal);
 }
+aside nav ul{
+    list-style: none;
+}
+
+aside nav ul li{
+    margin-bottom: var(--gutter-smal);
+}
+
+/* regola >= reponsive 
+aside .user hr{
+    margin: 10px 0;
+} */
+
+aside .user .user-top{
+    font-size: medium;
+    margin-bottom: var(--gutter-smal);
+}
+
+aside .user .user-bot{
+    font-size: xx-large;
+}
+
 
 /*---- FOOTER ---*/
 
