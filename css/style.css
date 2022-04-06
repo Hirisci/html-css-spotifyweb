@@ -258,8 +258,10 @@ aside .logo{
     width: 35px;
 }
 aside .logo-big{
-    margin-bottom: var(--gutter-smal);
-    width: 150px;
+    margin-top: 5px;
+    margin-bottom: var(--gutter);
+    width: 140px;
+    height: auto;
 }
 
 aside nav ul{
@@ -267,6 +269,7 @@ aside nav ul{
 }
 
 aside nav ul li{
+    display: flex;
     margin-bottom: var(--gutter-smal);
 }
 
@@ -423,15 +426,28 @@ footer .barra .inner:hover::after{
 
 
 @media screen and (min-width: 700px){
+
+    header{
+        width: calc(100% - 250px);
+    }
     
     .content .row{
         gap: 10px;
     }
 
-    
     .content .row .card-song{
         width: calc(100% /4 - 10px);
     }
+
+    aside{
+        padding: 10px;
+        align-items: flex-start;
+    }
+
+    aside img{
+        margin: 0;
+    }
+
 
 
     
