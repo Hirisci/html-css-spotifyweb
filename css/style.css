@@ -179,5 +179,33 @@ footer {
     background-color: var(--colore-bg-footer);
     height: 100px;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+footer .play-track{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+footer .play-track .play-track-img {
+    height: 45px;
+}
+footer .play-track-info-autor{
+    font-weight: 700;
+    color: var(--colore-bg-primario);
+}
+footer .play-track-info-titol{
+    font-size: small;
+}
+
+footer .play-track-button-list{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+    margin-left: 25px;
 }
 
