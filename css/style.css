@@ -208,7 +208,8 @@ main {
     opacity: 0;
     /* transition: opacity 1s; */
 }
-.content .row .card-song:hover .content .row .card-song .overlay{
+
+.card-song:hover .card-song-img .overlay{
     opacity: 1;
 }
 
@@ -233,9 +234,7 @@ main {
     overflow: hidden;
 }
 
-.content .row .card-song:hover .content .row .card-song .card-song-img .overlay{
-opacity: 1;
-}
+
 
 
 /*---- ASIDE ---*/
