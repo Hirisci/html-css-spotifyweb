@@ -79,6 +79,9 @@ li{
     display: none;
 }
 
+section{
+    margin-top: var(--gutter-big);
+}
 
 /*--- BUTTON ---*/
 
@@ -283,6 +286,7 @@ aside nav ul li{
     margin-bottom: var(--gutter-smal);
 }
 
+
 aside nav ul li a{
     font-size: small;
     display: flex;
@@ -294,6 +298,26 @@ aside nav ul li a{
     height: 30px;
     width: 30px;
     fill: var(--colore-testo-opaco);
+}
+
+
+
+.select{
+    color:var(--colore-testo-titolo);
+    position: relative;
+}
+
+.select::after{
+    content: "";
+    background-color: var(--colore-attivo);
+    position: absolute;
+    height: 35px;
+    width: 3px;
+    left: -20px;
+    top: 0px;
+}
+.select svg.icona{
+    fill: var(--colore-testo-titolo);
 }
 
 aside nav ul li:hover svg.icona{
