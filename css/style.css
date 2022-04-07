@@ -193,7 +193,7 @@ main {
     width: 100%;
 }
 
-.content .row .card-song .card-song-img .overlay{
+.card-song .card-song-img .overlay{
     position: absolute;
     top: 0;
     left: 0;
@@ -210,7 +210,7 @@ main {
 }
 
 .card-song:hover .card-song-img .overlay{
-    opacity: 1;
+        opacity: 1;
 }
 
 .content .row .card-song .card-song-info{
