@@ -11,7 +11,7 @@
 /*--- TESTO ---*/
 
 body{
-    color: var(--colore-testo);
+    color: var(--colore-testo-opaco);
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -100,6 +100,14 @@ button{
 
 
 
+/*--- HOVER ---*/
+
+
+
+ul li:hover {
+    color:var(--colore-testo) ;
+}
+
 
 
 /*╔═══════════════╗
@@ -114,27 +122,28 @@ header {
     width: calc(100% - 50px);
     top: 0;
     right: 0;
-    text-align: right;
-    padding: 20px 5px;
+    height: 80px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 /*---- MAIN ---*/
 main {
     display: flex;
+    height: calc(100vh - 100px);
 }
 
 /*--- CONTENT ---*/
 .content{
-    padding: 20px;
+    padding: 0 20px;
+    padding-top: 90px;
     background-color: var(--colore-bg-content);
     flex-grow: 1;
-    height: calc(100vh - 100px);
     overflow-y: auto;
 }
 
 .content nav {
-    margin-top: 60px;
-    color: var(--colore-testo-opaco);
     text-transform: uppercase;
     text-align: center;
     line-height: 40px;
@@ -147,6 +156,7 @@ main {
     margin: 0 5px;
     position: relative;
 }
+
 .content nav ul li a{
     padding: 5px;
 }
@@ -198,6 +208,9 @@ main {
     opacity: 0;
     /* transition: opacity 1s; */
 }
+.content .row .card-song:hover .content .row .card-song .overlay{
+    opacity: 1;
+}
 
 .content .row .card-song .card-song-info{
     text-align: center;
@@ -212,7 +225,6 @@ main {
 .content .row .card-song .card-song-info .autore{
     font-size: small;
     font-weight: 700;
-    color: var(--colore-testo-opaco);
     margin-top: 5px;
 }
 
@@ -226,21 +238,13 @@ opacity: 1;
 }
 
 
-
-
-
-
-
-
 /*---- ASIDE ---*/
 
 aside {
-    color: var(--colore-testo-opaco);
     background-color: var(--colore-bg-aside);
     width: 50px;
-    padding: 10px 0; 
+    padding-bottom: 10px; 
     /* width: 230px; */
-    height: calc(100vh - 100px);
     flex-shrink: 0;
     display: flex;
     flex-flow: column nowrap;
@@ -256,15 +260,18 @@ aside img{
 }
 
 aside .logo{
-    margin-bottom: var(--gutter-smal);
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+aside .logo .logo-sm{
+    vertical-align: middle;
     height: 35px;
     width: 35px;
 }
 aside .logo-big{
-    margin-top: 5px;
-    margin-bottom: var(--gutter);
-    width: 140px;
-    height: auto;
+    width: 100%;
 }
 
 aside nav ul{
@@ -286,6 +293,10 @@ aside nav ul li a{
     height: 30px;
     width: 30px;
     fill: var(--colore-testo-opaco);
+}
+
+aside nav ul li:hover svg.icona{
+    fill: var(--colore-testo);
 }
 
 aside .user hr{
@@ -342,7 +353,6 @@ aside .playlist ul li a i{
 /*---- FOOTER ---*/
 
 footer {
-    color: var(--colore-testo-opaco);
     background-color: var(--colore-bg-footer);
     height: 100px;
     width: 100%;
@@ -447,9 +457,7 @@ footer .barra .inner:hover::after{
     right: -8px;
 }
 
-ul li:hover {
-    color:var(--colore-testo) ;
-}
+
 
 
 @media screen and (min-width: 600px){
@@ -458,11 +466,11 @@ ul li:hover {
     }
 
     aside{
-        padding: 20px;
+        padding: 0 20px 20px 20px;
         align-items: flex-start;
     }
 
-    aside .logo{
+    aside .logo-sm{
         display: none;
     }
 
@@ -484,9 +492,6 @@ ul li:hover {
    
     
 }
-
-
-
 
 
 @media screen and (min-width: 700px){
