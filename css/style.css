@@ -282,6 +282,12 @@ aside nav ul li a{
     gap: var(--gutter-smal);
 }
 
+.icona{
+    height: 30px;
+    width: 30px;
+    fill: var(--colore-testo-opaco);
+}
+
 aside .user hr{
     margin: 10px 0;
     width: 200px;    
