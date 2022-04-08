@@ -171,11 +171,22 @@ li{
     padding: var(--gutter-xl);
 }
 
+/*-- BUTTON --*/
+
+button{
+    background-color: transparent;
+    border: 1px solid black;
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
 
 
 /*╔═══════════════╗
     TAG SEMANTICI
   ╚═══════════════╝*/
+
 
   /*- Header -*/
 
@@ -192,16 +203,10 @@ header{
 
 section{
     position: relative;
+    min-height: 70vh;
 }
 
-.background{
-    position: absolute;
-    background-color: yellow;
-    height: 500px;
-    width: 80%;
-    left: 50%;
-    transform: translateX(-50%);
-}
+
 
 .postcard{
     position: relative;
@@ -209,10 +214,12 @@ section{
 }
 
 .postcard-text-box{
+    height: 100%;
     width: calc(100% / 5 *3.5);
     background-color: yellow;
     padding: 0 var(--gutter-xl);
-    padding-bottom: 120+px;
+    padding-bottom: 120px;
+   
 
 }
 
@@ -223,7 +230,7 @@ section{
 
 .postcard-img-box{
     position: relative;
-    top: -120+px;
+    top: -120px;
     width: calc(100% / 5 * 3);
 }
 
@@ -243,6 +250,7 @@ footer{
 .footer-top{
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-around;
 }
 
 .footer-bot{
@@ -258,4 +266,36 @@ footer hr{
     margin: var(--gutter-md) 0;
 }
 
+@media screen and (min-width: 750px) {
+    .footer-top .info{
+        width: auto;
+    }
+    
+}
 
+@media screen and (min-width: 950px) {
+    .container{
+        margin: 0 50px;
+    }
+    .row{
+        flex-flow: row nowrap;
+    }
+
+    .postcard-text-box{
+        width: calc(100% / 5 *3);
+        background-color: yellow;
+        padding: 0 var(--gutter-xl);
+        padding: 50px;
+        padding-right: 
+    
+    }
+
+    .postcard-img-box{
+        position: relative;
+        top: 0px;
+        left: -40px;
+        width: calc(100% / 5 * 2.5);
+        flex-shrink: 0;
+    }
+    
+}
