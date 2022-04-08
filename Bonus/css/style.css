@@ -1,0 +1,261 @@
+/*╔═══════════════╗
+        RESET
+  ╚═══════════════╝*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/*╔═══════════════╗
+      VARIABILI
+  ╚═══════════════╝*/
+
+:root{
+    /*- COLORI TESTO -*/
+    --colore-testo: #fff;
+    --colore-testo-titolo: #000;
+    /*- COLORI BG -*/
+    --colore-bg-primario: #fff;
+
+    /*- DIMENSIONI GUTTER*/
+    --gutter-sm: 0.5rem;
+    --gutter-md: 1rem;
+    --gutter-lg: 1.5rem;
+    --gutter-xl: 2rem;
+}
+
+/*--- TESTO ---*/
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+h1,h2,h3,h4,h5,h6{
+    font-weight: 700;
+}
+
+h1{
+    font-size: 2rem;
+}
+h2{
+    font-size: 1.8rem;
+}
+h3{
+    font-size: 1.65rem;
+}
+h4{
+    font-size: 1.50rem;
+}
+h5{
+    font-size: 1.25rem;
+}
+h6{
+    font-size: 1.1rem;
+}
+
+p{
+    font-size: 1rem;
+}
+small{
+    font-size: 0.6rem;
+}
+
+
+
+/*--- TAG ---*/
+a{
+    color: inherit;
+    text-decoration: none;
+}
+a:visited,a:hover{
+    color: inherit;
+}
+li{
+    text-decoration: none;
+}
+
+/*╔═══════════════╗
+       DEBUG
+  ╚═══════════════╝*/
+  .debug header{
+      background-color: aqua;
+  }
+
+  .debug aside{
+      background-color: black;
+  }
+
+  .debug .content{
+      background-color: coral;
+  }
+  
+  .debug footer{
+      background-color: brown;
+  }
+  
+/*╔═══════════════╗
+       COMMON
+  ╚═══════════════╝*/
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.row{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.center-x-y{
+    justify-content: center;
+    align-items: center;
+}
+
+.just-cont-btw{
+    justify-content: space-between;
+}
+
+.gutter-sm{
+    padding: var(--gutter-sm);
+}
+
+.gutter-md{
+    padding: var(--gutter-md);
+}
+.gutter-lg{
+    padding: var(--gutter-sm);
+}
+.gutter-xl{
+    padding: var(--gutter-xl);
+}
+
+
+
+/*╔═══════════════╗
+    TAG SEMANTICI
+  ╚═══════════════╝*/
+
+  /*- Header -*/
+
+header{
+    display: flex;
+}
+
+.hamburger-menu{
+    font-size: 2rem;
+}
+
+
+/*- MAIN -*/
+
+section{
+    position: relative;
+}
+
+.background{
+    position: absolute;
+    background-color: yellow;
+    height: 500px;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.postcard{
+    position: relative;
+
+}
+
+.postcard-text-box{
+    width: calc(100% / 5 *3.5);
+    background-color: yellow;
+    padding: 0 var(--gutter-xl);
+    padding-bottom: 120+px;
+
+}
+
+.postcard-text-box > *{
+    margin: var(--gutter-lg) 0;
+}
+
+
+.postcard-img-box{
+    position: relative;
+    top: -120+px;
+    width: calc(100% / 5 * 3);
+}
+
+.postcard-img-box img{
+    width: 100%;
+}
+
+
+
+/*- FOOTER -*/
+
+footer{
+    background-color: #000;
+    color: #fff;
+}
+
+.footer-top{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.footer-bot{
+    text-align: center;
+}
+
+.footer-top .info{
+    margin: var(--gutter-md) 0;
+    width: calc(100% / 1);
+}
+
+footer hr{
+    margin: var(--gutter-md) 0;
+}
+
+
